@@ -1,0 +1,145 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<section class="container-none">
+    <div id="carouselExampleAutoplaying" class="carousel slide relative" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'cat4.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'cat3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'cat5.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+        <div class="card-group relative bottom-28 p-10 mx-auto" >
+            <div class="row g-4 flex-auto">
+                <div class="col-md-4">
+                  <div class="card border-4">
+                    <img src="{% static 'cat6.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body bg-black text-white">
+                        <h5 class="card-title">Nucita</h5>
+                        <h6 class="card-title text-orange-500">Cat 1</h6>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="/adopt" class="btn btn-outline-light mt-2">Adopt</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card border-4">
+                    <img src="{% static 'cat7.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body bg-black text-white">
+                        <h5 class="card-title">Trululu</h5>
+                        <h6 class="card-title text-orange-500">Cat 2</h6>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="/adopt" class="btn btn-outline-light mt-4">Adopt</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card border-4">
+                    <img src="{% static 'cat8.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body bg-black text-white">
+                      <h5 class="card-title">Bigotes</h5>
+                      <h6 class="card-title text-orange-500">Cat 3</h6>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="/adopt" class="btn btn-outline-light mt-4">Adopt</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+  </section>
+
+  <section>
+    <div class="container text-center text-white">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="text-3xl">ABOUT <b>US</b></h1>
+            <br>
+            <br>
+            <p class="text-orange-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem modi error, recusandae voluptatum eligendi voluptates consequatur facere explicabo tempore, aspernatur adipisci veritatis deserunt eum harum commodi repellendus enim, perferendis id.</p>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem vel quis quaerat, maxime facilis, tenetur ea repellendus accusantium ab sunt sint blanditiis soluta veritatis distinctio, culpa repudiandae. Officia ad voluptates voluptatibus molestiae, eligendi rerum quasi quae eum ratione pariatur porro maiores omnis, magni esse exercitationem consequuntur doloremque asperiores numquam.</p>
+            <br>
+            <br>
+            <a href="/about" class="btn text-orange-500 border-orange-500 hover:border-white min-[320px]:mb-16 max-[600px]">View More</a>
+          </div>
+
+          <div class="col-md-4">
+            <h1 class="text-3xl"><b>OUR</b> EVENTS</h1>
+            <br>
+            <br>
+            <p class="text-orange-500">Lorem ipsum dolor sit amet</p>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam perspiciatis, numquam cupiditate tempore dolorum explicabo consectetur qui quia vitae a?</p>
+            <br>
+            <hr class="h-2">
+            <p class="text-orange-500">Lorem ipsum dolor sit amet</p>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam perspiciatis, numquam cupiditate tempore dolorum explicabo consectetur qui quia vitae a?</p>
+            <br>
+            <hr class="h-2">
+            <br>
+            <br>
+            <a href="/about"  class="btn text-orange-500 border-orange-500 hover:border-white min-[320px]:mb-24">View More</a>
+          </div>
+
+          <div class="col-md-4">
+            <h1 class="text-3xl"><b>LAST</b> NEWS</h1>
+            <br>
+            <br>
+            <div class="card mb-3 bg-black text-white border-white hv2 cursor-pointer" style="max-width: 540px;" >
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static 'cat1.jpg' %}" class="h-full w-full" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title text-orange-500">Cat 4</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card mb-3 hv2 cursor-pointer" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static 'cat9.jpg' %}" class="h-full w-full" alt="...">
+                  </div>
+                  <div class="col-md-8 bg-black text-white border-white">
+                    <div class="card-body">
+                      <h5 class="card-title text-orange-500">Cat 5</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+{% endblock %}

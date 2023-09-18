@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-20 text-white font-bold text-6xl cursor-pointer">Welcome to <b class="text-orange-500">Store</b></h1>
+
+<div class="container mt-20 bg-black row min-[320px]:mt-10 max-[620px]:flex-col">
+      <div class="col-8">
+            <div class="col-12">
+                  <div class="row ">
+                        {% for producto in productos %}
+                      <div class="col-4">
+                          <div class="card mt-2 mb-4 bg-black text-white border-2 border-inherit" style="width: 16rem;">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="{% static 'gorro1.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="{% static 'gorro2.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="{% static 'gorro6.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="{% static 'gorro8.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="{% static 'gorro4.webp' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="{% static 'gorro3.webp' %}" class="d-block w-100" alt="...">
+                                </div>
+                              </div>
+                            <div class="card-body">
+                              <h5 class="card-title">{{producto.nombre}}</h5>
+                              <p class="card-text">{{producto.categoria}}</p>
+                              <p class="card-text text-orange-500">${{producto.precio}}</p>
+                              <a href="{% url 'Add' producto.id %}" class="btn bg-orange-500 text-white">Agregar</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+            </div>
+        </div>
+    <div class="col-4">
+        {% include "cart.html" %}
+    </div>
+</div>
+
+{% endblock %}

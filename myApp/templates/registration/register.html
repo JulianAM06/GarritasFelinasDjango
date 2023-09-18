@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+
+{% block content %}
+
+<h1 class="text-center mt-20 text-white font-bold text-6xl cursor-pointer mb-20">New <b class="text-orange-500">User</b></h1>
+
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img class="mx-auto h-10 w-auto" src="{% static 'gato-icono.png' %}" alt="">
+      <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create your account</h2>
+    </div>
+
+<form action="" method="post">
+    {% csrf_token %} 
+
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <table class="text-white mx-auto">
+        <tbody>
+            <tr>
+                <th><label for="id_username" class="block text-md font-medium leading-6 text-white">Username:</label></th>
+            <td>
+                <input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ml-4">
+                 <br>
+            </td>
+         </tr>
+         
+        <tr>
+             <th><label for="id_password1" class="block text-md font-medium leading-6 text-white">Password:</label></th>
+            <td>
+            <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ml-4">
+            <br>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="id_password2" class="block text-md font-medium leading-6 text-white">Password Again:</label></th>
+            <td>
+                <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ml-4">
+                 <br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="mt-20">
+        <button type="reset"  value="limpiar" class="flex-none rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 hv2 ml-28">Clean</button>
+        <button type="submit"  value="registar" class="flex-none rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 hv2">Register</button>
+    </div>
+    </div>
+</div>
+</form>
+
+
+{% endblock %}
+
+<span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+
+<span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>
+
+<span class="helptext">Enter the same password as before, for verification.</span>

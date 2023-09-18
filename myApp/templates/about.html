@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-20 text-white font-bold text-6xl cursor-pointer mb-28">Welcome to <b class="text-orange-500">About Us</b></h1>
+
+<div class="card mb-3">
+    <img src="{% static 'cat10.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body bg-black text-white">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  
+  <div class="card mb-3 mt-24">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'cat12.jpg' %}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 bg-black">
+        <div class="card-body text-white">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit dolorem suscipit quae cum maiores quisquam saepe sit accusamus illo harum, reiciendis laudantium voluptate, explicabo laboriosam pariatur, eum dolores possimus nihil odit? Illum illo tenetur quae esse molestias iste, quasi reiciendis libero enim accusamus commodi nisi, pariatur minima? Cupiditate, alias minima?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

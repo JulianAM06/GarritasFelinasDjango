@@ -1,0 +1,47 @@
+
+<div class="mr-8" role="">
+    <table class="table table-bordered">
+      <thead class="">
+        <tr>
+          <th scope="row" colspan="3" class="text-center bg-black text-white">CARRITO</th>
+        </tr>
+        <tr class="text-center ">
+          <th scope="col" class="bg-black text-white">NOMBRE</th>
+          <th scope="col" class="bg-black text-white">PRECIO</th>
+          <th scope="col" class="bg-black text-white">CANTIDAD</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% if request.session.carrito.items %}
+      {% for key, value in request.session.carrito.items %}
+        <tr>
+          <td class="bg-black text-white text-center">{{value.nombre}}</td>
+          <td class="bg-black text-white">{{value.precio}}</td>
+          <td class="bg-black text-white">{{value.acomulado}}
+            <a href="{% url 'Add' value.producto_id %}" class="badge btn bg-orange-500 badge-dark">+</a>
+            <a href="{% url 'Sub' value.producto_id %}" class="badge btn bg-orange-500 badge-dark">-</a>
+          </td>
+        </tr>
+      {% endfor %}
+      {% else %}
+      <tr>
+          <td colspan="3" class="bg-black">
+              <div class="alert bg-orange-500 text-white text-center"> Sin Productos </div>
+          </td>
+      </tr>
+      {% endif %}
+        <tr>
+          <th scope="row" class="bg-black text-white">Total:</th>
+          <td colspan="2" class="bg-black text-white">$ {{total_carrito}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    </div>
+    <div class="row text-center">
+        <div class="col-4"><a href="{% url 'Cls' %}" class="btn bg-orange-500 hover:bg-orange-500 text-white hv2">Limpiar</a></div>
+        <div class="col-4"><a href="#" class="btn bg-orange-500 hover:bg-orange-500 text-white hv2">Pagar</a></div>
+    </div>
+
+
+  
